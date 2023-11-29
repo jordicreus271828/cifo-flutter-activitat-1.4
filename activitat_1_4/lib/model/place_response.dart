@@ -4,24 +4,24 @@
 
 import 'dart:convert';
 
-PostalCodeToPlace postalCodeToPlaceFromJson(String str) => PostalCodeToPlace.fromJson(json.decode(str));
+PlaceResponse placeResponseFromJson(String str) => PlaceResponse.fromJson(json.decode(str));
 
-String postalCodeToPlaceToJson(PostalCodeToPlace data) => json.encode(data.toJson());
+String placeResponseToJson(PlaceResponse data) => json.encode(data.toJson());
 
-class PostalCodeToPlace {
+class PlaceResponse {
   String postCode;
   String country;
   String countryAbbreviation;
   List<Place> places;
 
-  PostalCodeToPlace({
+  PlaceResponse({
     required this.postCode,
     required this.country,
     required this.countryAbbreviation,
     required this.places,
   });
 
-  factory PostalCodeToPlace.fromJson(Map<String, dynamic> json) => PostalCodeToPlace(
+  factory PlaceResponse.fromJson(Map<String, dynamic> json) => PlaceResponse(
     postCode: json["post code"],
     country: json["country"],
     countryAbbreviation: json["country abbreviation"],

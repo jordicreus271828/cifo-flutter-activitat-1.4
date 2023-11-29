@@ -1,10 +1,9 @@
-import 'package:activitat_1_4/model/place_to_postal_code.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-import '../model/postal_code_to_place.dart';
-import '../widgets/place_to_postal_code_result.dart';
-import '../widgets/postal_code_to_place_result.dart';
+import '../model/place_response.dart';
+import '../model/postal_codes_response.dart';
+import '../widgets/result.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.title});
@@ -17,14 +16,16 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   // tab 1: postal code to place
-  final TextEditingController _tab1TextFieldController = TextEditingController();
+  final TextEditingController _tab1TextFieldController =
+      TextEditingController();
   bool _tab1TextFieldHas5Characters = false;
-  PostalCodeToPlace? _postalCodeToPlace;
+  PlaceResponse? _placeResponse;
   bool _tab1ShowResult = false;
 
   // tab 2: place to postal code
-  final TextEditingController _tab2TextFieldController = TextEditingController();
-  PlaceToPostalCode? _placeToPostalCode;
+  final TextEditingController _tab2TextFieldController =
+      TextEditingController();
+  PostalCodesResponse? _postalCodesResponse;
   bool _tab2ShowResults = false;
 
   @override
@@ -53,8 +54,7 @@ class _HomePageState extends State<HomePage> {
                     const Text("Enter a postal code"),
                     const SizedBox(height: 10),
                     TextField(
-                      decoration:
-                          const InputDecoration(hintText: "Ex: 08907"),
+                      decoration: const InputDecoration(hintText: "Ex: 08907"),
                       controller: _tab1TextFieldController,
                       keyboardType: TextInputType.number,
                       maxLength: 5,
@@ -81,10 +81,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ],
                     ),
-                    if (_tab1ShowResult) const SizedBox(height: 10),
-                    if (_tab1ShowResult)
-                      PostalCodeToPlaceResult(
-                          postalCodeToPlace: _postalCodeToPlace),
+                    if (_tab1ShowResult) ...tab1ShowResult(),
                   ],
                 ),
               ),
@@ -118,12 +115,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ],
                     ),
-                    if (_tab2ShowResults) const SizedBox(height: 10),
-                    if (_tab2ShowResults && _placeToPostalCode == null)
-                      const PlaceToPostalCodeResult(place: null),
-                    if (_tab2ShowResults && _placeToPostalCode != null)
-                      for (var place in _placeToPostalCode!.places)
-                        PlaceToPostalCodeResult(place: place),
+                    if (_tab2ShowResults) ...tab2ShowResults(),
                   ],
                 ),
               ),
@@ -140,9 +132,9 @@ class _HomePageState extends State<HomePage> {
     http.Response response =
         await http.get(Uri.parse("https://api.zippopotam.us/es/$postalCode"));
     try {
-      _postalCodeToPlace = postalCodeToPlaceFromJson(response.body);
+      _placeResponse = placeResponseFromJson(response.body);
     } catch (e) {
-      _postalCodeToPlace = null;
+      _placeResponse = null;
     }
     _tab1ShowResult = true;
     setState(() {});
@@ -154,11 +146,31 @@ class _HomePageState extends State<HomePage> {
     http.Response response =
         await http.get(Uri.parse("https://api.zippopotam.us/es/ct/$place"));
     try {
-      _placeToPostalCode = placeToPostalCodeFromJson(response.body);
+      _postalCodesResponse = postalCodesResponseFromJson(response.body);
     } catch (e) {
-      _placeToPostalCode = null;
+      _postalCodesResponse = null;
     }
     _tab2ShowResults = true;
     setState(() {});
+  }
+
+  tab1ShowResult() {
+    return [
+      const SizedBox(height: 10),
+      if (_placeResponse == null) const Result(place: null),
+      if (_placeResponse != null) Result(place: _placeResponse!.places.first),
+    ];
+  }
+
+  tab2ShowResults() {
+    return [
+      const SizedBox(height: 10),
+      if (_postalCodesResponse == null) const Result(place: null),
+      if (_postalCodesResponse != null)
+        for (var place in _postalCodesResponse!.places) ...[
+          Result(place: place),
+          const SizedBox(height: 10),
+        ],
+    ];
   }
 }
