@@ -4,27 +4,21 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dba5f4d6-ef2c-4c2f-a25c-118ec5bf455d" name="Changes" comment="Initial Commit">
-      <change afterPath="$PROJECT_DIR$/screenshots/Screenshot_20231129_133723.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/Screenshot_20231129_134000.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/Screenshot_20231129_134151.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/Screenshot_20231129_134232.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/Screenshot_20231129_134354.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/Screenshot_20231129_134433.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/Screenshot_20231129_134527.png" afterDir="false" />
+    <list default="true" id="dba5f4d6-ef2c-4c2f-a25c-118ec5bf455d" name="Changes" comment="- Renamed some classes, functions, and variables to make them easier to read.&#10;- Factorized the result widgets.&#10;- Redefined the result widget as a Card.">
+      <change afterPath="$PROJECT_DIR$/screenshots/Screenshot_20231129_195040.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/Screenshot_20231129_195241.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/Screenshot_20231129_195343.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/Screenshot_20231129_195411.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/activitat_1_4/lib/model/place_to_postal_code.dart" beforeDir="false" afterPath="$PROJECT_DIR$/activitat_1_4/lib/model/postal_codes_response.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/activitat_1_4/lib/model/postal_code_to_place.dart" beforeDir="false" afterPath="$PROJECT_DIR$/activitat_1_4/lib/model/place_response.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/activitat_1_4/lib/screens/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/activitat_1_4/lib/screens/home_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/activitat_1_4/lib/widgets/place_to_postal_code_result.dart" beforeDir="false" afterPath="$PROJECT_DIR$/activitat_1_4/lib/widgets/result.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/activitat_1_4/lib/widgets/postal_code_to_place_result.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/Screenshot_20231127_171419.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/Screenshot_20231127_171502.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/Screenshot_20231127_171639.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/Screenshot_20231127_171712.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/Screenshot_20231127_171811.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/Screenshot_20231127_171942.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/Screenshot_20231127_172055.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/activitat_1_4/lib/widgets/result.dart" beforeDir="false" afterPath="$PROJECT_DIR$/activitat_1_4/lib/widgets/result_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/Screenshot_20231129_133723.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/Screenshot_20231129_134000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/Screenshot_20231129_134151.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/Screenshot_20231129_134232.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/Screenshot_20231129_134354.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/Screenshot_20231129_134433.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/Screenshot_20231129_134527.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +49,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
-    "ScreenshotViewer.SavePath": "/home/jordi/AndroidStudioProjects/activitat_1.4",
+    "ScreenshotViewer.SavePath": "/home/jordi/AndroidStudioProjects/activitat_1.4/screenshots",
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
     "io.flutter.reload.alreadyRun": "true",
@@ -91,7 +85,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701102652837</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="- Renamed some classes, functions, and variables to make them easier to read.&#10;- Factorized the result widgets.&#10;- Redefined the result widget as a Card.">
+      <created>1701263768132</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701263768132</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -107,6 +108,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="- Renamed some classes, functions, and variables to make them easier to read.&#10;- Factorized the result widgets.&#10;- Redefined the result widget as a Card." />
+    <option name="LAST_COMMIT_MESSAGE" value="- Renamed some classes, functions, and variables to make them easier to read.&#10;- Factorized the result widgets.&#10;- Redefined the result widget as a Card." />
   </component>
 </project>

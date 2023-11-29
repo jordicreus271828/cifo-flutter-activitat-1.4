@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 
 import '../model/place_response.dart';
 import '../model/postal_codes_response.dart';
-import '../widgets/result.dart';
+import '../widgets/result_card.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.title});
@@ -157,18 +157,21 @@ class _HomePageState extends State<HomePage> {
   tab1ShowResult() {
     return [
       const SizedBox(height: 10),
-      if (_placeResponse == null) const Result(place: null),
-      if (_placeResponse != null) Result(place: _placeResponse!.places.first),
+      if (_placeResponse == null)
+        const ResultCard(isError: true, tab: 1, place: null),
+      if (_placeResponse != null)
+        ResultCard(isError: false, tab: 1, place: _placeResponse!.places.first),
     ];
   }
 
   tab2ShowResults() {
     return [
       const SizedBox(height: 10),
-      if (_postalCodesResponse == null) const Result(place: null),
+      if (_postalCodesResponse == null)
+        const ResultCard(isError: true, tab: 2, place: null),
       if (_postalCodesResponse != null)
         for (var place in _postalCodesResponse!.places) ...[
-          Result(place: place),
+          ResultCard(isError: false, tab: 2, place: place),
           const SizedBox(height: 10),
         ],
     ];

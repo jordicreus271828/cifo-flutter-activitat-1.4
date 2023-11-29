@@ -3,26 +3,30 @@ import 'package:flutter/material.dart';
 import '../model/place_response.dart' as place_response;
 import '../model/postal_codes_response.dart' as postal_codes_response;
 
-class Result extends StatelessWidget {
-  const Result({
+class ResultCard extends StatelessWidget {
+  const ResultCard({
     super.key,
+    required this.isError,
+    required this.tab,
     required this.place,
   });
 
+  final bool isError;
+  final int tab;
   final Object? place;
 
   @override
   Widget build(BuildContext context) {
     return Card(
       shape: RoundedRectangleBorder(
-        side: BorderSide(color: (place == null) ? Colors.red : Colors.green),
+        side: BorderSide(color: isError ? Colors.red : Colors.green),
         borderRadius: BorderRadius.circular(10),
       ),
       child: Container(
         padding: const EdgeInsets.all(10),
         width: double.infinity,
         child: LayoutBuilder(builder: (context, constraints) {
-          if (place == null) {
+          if (isError) {
             return Row(
               children: [
                 const Icon(
@@ -31,14 +35,14 @@ class Result extends StatelessWidget {
                 ),
                 const SizedBox(width: 5),
                 Text(
-                  (place is place_response.Place)
+                  (tab == 1)
                       ? "This postal code does not exist."
                       : "This place does not exist.",
                 )
               ],
             );
           } else {
-            if (place is place_response.Place) {
+            if (tab == 1) {
               place_response.Place place1 = place as place_response.Place;
               return Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
