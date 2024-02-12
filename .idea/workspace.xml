@@ -4,26 +4,31 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dba5f4d6-ef2c-4c2f-a25c-118ec5bf455d" name="Changes" comment="- Renamed some classes, functions, and variables to make them easier to read.&#10;- Factorized the result widgets.&#10;- Redefined the result widget as a Card.">
-      <change afterPath="$PROJECT_DIR$/screenshots/Screenshot_20231129_195040.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/Screenshot_20231129_195241.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/Screenshot_20231129_195343.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/Screenshot_20231129_195411.png" afterDir="false" />
+    <list default="true" id="dba5f4d6-ef2c-4c2f-a25c-118ec5bf455d" name="Changes" comment="Fixed wrong error message.">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/scaled/Screenshot_20231129_195040.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/scaled/Screenshot_20231129_195241.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/scaled/Screenshot_20231129_195343.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/scaled/Screenshot_20231129_195411.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/scaled/Screenshot_20231129_195523.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/scaled/Screenshot_20231129_195551.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/scaled/Screenshot_20231129_195645.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/activitat_1_4/lib/screens/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/activitat_1_4/lib/screens/home_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/activitat_1_4/lib/widgets/result.dart" beforeDir="false" afterPath="$PROJECT_DIR$/activitat_1_4/lib/widgets/result_card.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/Screenshot_20231129_133723.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/Screenshot_20231129_134000.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/Screenshot_20231129_134151.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/Screenshot_20231129_134232.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/Screenshot_20231129_134354.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/Screenshot_20231129_134433.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/Screenshot_20231129_134527.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/Screenshot_20231129_195040.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/Screenshot_20231129_195241.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/Screenshot_20231129_195343.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/Screenshot_20231129_195411.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/Screenshot_20231129_195523.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/Screenshot_20231129_195551.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/Screenshot_20231129_195645.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -44,20 +49,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "ScreenshotViewer.SavePath": "/home/jordi/AndroidStudioProjects/activitat_1.4/screenshots",
-    "cidr.known.project.marker": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "io.flutter.reload.alreadyRun": "true",
-    "last_opened_file_path": "/home/jordi/AndroidStudioProjects/activitat_1.4/screenshots",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "show.migrate.to.gradle.popup": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;ScreenshotViewer.SavePath&quot;: &quot;/home/jordi/AndroidStudioProjects/activitat_1.4/screenshots&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/jordi/AndroidStudioProjects/curs flutter cifo/activitat_1.4&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/screenshots" />
@@ -92,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701263768132</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fixed wrong error message.">
+      <created>1701284409448</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701284409448</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -109,6 +125,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="- Renamed some classes, functions, and variables to make them easier to read.&#10;- Factorized the result widgets.&#10;- Redefined the result widget as a Card." />
-    <option name="LAST_COMMIT_MESSAGE" value="- Renamed some classes, functions, and variables to make them easier to read.&#10;- Factorized the result widgets.&#10;- Redefined the result widget as a Card." />
+    <MESSAGE value="Fixed wrong error message." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed wrong error message." />
   </component>
 </project>
